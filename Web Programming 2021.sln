@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00 Presentations", "00 Presentations\00 Presentations.csproj", "{0F0F40C0-E134-4748-A70F-77334E587F55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01 Web Programming Introduction", "01 Web Programming Introduction\01 Web Programming Introduction.csproj", "{5C6FF3DC-EB3A-489C-8D2B-6A10514AB83C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01 Web Programming Introduction", "01 Web Programming Introduction\01 Web Programming Introduction.csproj", "{5C6FF3DC-EB3A-489C-8D2B-6A10514AB83C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02 ASP.NET Introduction", "02 ASP.NET Introduction\02 ASP.NET Introduction.csproj", "{F1732B95-5F43-4981-8B2F-9415359D9916}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{5C6FF3DC-EB3A-489C-8D2B-6A10514AB83C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C6FF3DC-EB3A-489C-8D2B-6A10514AB83C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C6FF3DC-EB3A-489C-8D2B-6A10514AB83C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1732B95-5F43-4981-8B2F-9415359D9916}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1732B95-5F43-4981-8B2F-9415359D9916}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1732B95-5F43-4981-8B2F-9415359D9916}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1732B95-5F43-4981-8B2F-9415359D9916}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

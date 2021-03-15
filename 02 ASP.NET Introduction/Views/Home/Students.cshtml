@@ -1,0 +1,25 @@
+﻿@model _02_ASP.NET_Introduction.Models.Home.StudentsViewModel
+
+@{
+    ViewData["Title"] = "Students";
+}
+
+@Model.Class
+
+<hr />
+
+<table width="100%">
+    <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Student number</th>
+    </tr>
+    @foreach (var student in Model.Students)
+    {
+        <tr>
+            <td>@student.FirstName</td>
+            <td>@student.LastName</td>
+            <td>@student.StudentNumber</td>
+        </tr>
+    }
+</table>
