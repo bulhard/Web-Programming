@@ -1,0 +1,30 @@
+﻿@model IEnumerable<_04_ASP.NET_Core_MVC.Model.StudentViewModel>
+
+<h2>Students</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Student Name
+        </th>
+        <th>
+            Age
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.StudentId }) |
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,36 @@
+﻿@model IList<_04_Students_Homework.Models.Students.StudentViewModel>
+
+    <h2>Students</h2>
+
+    <table class="table">
+        <tr>
+            <th>
+                Student number
+            </th>
+            <th>
+                First name
+            </th>
+            <th>
+                Last name
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => student.StudentNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => student.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => student.LastName)
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = student.StudentNumber })
+                </td>
+            </tr>
+        }
+    </table>

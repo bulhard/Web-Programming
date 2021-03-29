@@ -7,11 +7,11 @@ using Microsoft.Extensions.Configuration;
 
 namespace _04_ASP.NET_Core_MVC.Controllers
 {
-    public class HomeController : Controller
+    public class AboutController : Controller
     {
         private IConfiguration configuration;
 
-        public HomeController(IConfiguration configuration)
+        public AboutController(IConfiguration configuration)
         {
             this.configuration = configuration;
         }

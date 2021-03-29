@@ -1,0 +1,20 @@
+﻿@model _04_Students_Homework.Models.Students.StudentViewModel
+
+<h2>Student Details</h2>
+
+<table class="table">
+    <tr>
+        <td>Student number</td>
+        <td>@Model.StudentNumber</td>
+    </tr>
+    <tr>
+        <td>First name</td>
+        <td>@Model.FirstName</td>
+    </tr>
+    <tr>
+        <td>Last name</td>
+        <td>@Model.LastName</td>
+    </tr>
+</table>
+
+@Html.ActionLink("Back to Students list", "Index")
