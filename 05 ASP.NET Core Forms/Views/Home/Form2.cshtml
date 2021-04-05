@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Form 2";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Form 2</h1>
+    <form method="post" action="form1" id="form2">
+        <div>
+            <label for="firstName">First name:</label>
+            <input type="text" name="firstName" value="John" />
+        </div>
+        <div>
+            <label for="lastName">Last name:</label>
+            <input type="text" name="lastName" minlength="2" value="" required />
+        </div>
+        <div>
+            <label for="email">EMail:</label>
+            <input type="email" name="email" value="" required />
+        </div>
+        <div>
+            <label for="firstName">Category:</label>
+            <select name="category">
+                <option value="1">Category 1</option>
+                <option value="2">Category 2</option>
+                <option value="3">Category 3</option>
+            </select>
+        </div>
+        <hr />
+        <input type="button" value="Save" onclick="Validate()" />
+    </form>
+</div>
+
+<script>
+    function Validate() {
+
+        var form = $("#form2");
+
+        console.log(form.valid());
+
+        if (form.valid()) {
+            form.submit();
+        }
+    }
+</script>
