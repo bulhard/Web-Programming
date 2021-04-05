@@ -2,19 +2,53 @@
     ViewData["Title"] = "Form 1";
 }
 
-<div class="text-center">
+<div>
     <h1 class="display-4">Form 1</h1>
-    <form method="post" action="Form1WithModel">
-        <label for="firstName">First name:</label> <input type="text" name="firstName" value="John" /><br />
-        <label for="firstName">Last name:</label> <input type="text" name="lastName" value="Smith" /><br />
-        <label for="firstName">Category:</label>
-        <select name="category">
-            <option value="1">Category 1</option>
-            <option value="2">Category 2</option>
-            <option value="3">Category 3</option>
-        </select>
-        <br />
-        <hr />
-        <input type="submit" value="Submit" />
+    <form method="post" action="Form1WithModel" id="form1"> 
+        <div class="form-group">
+            <label for="firstName">First name:</label>
+            <input type="text" name="firstName" value="John" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">Last name:</label>
+            <input type="text" name="lastName" value="Smith" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="category">Category:</label>
+            <select name="category" class="form-control">
+                <option value="1">Category 1</option>
+                <option value="2">Category 2</option>
+                <option value="3">Category 3</option>
+            </select>
+        </div>
+
+        <input type="button" value="Save" onclick="SubmitFormPost()" />
     </form>
 </div>
+
+
+<script>
+    function SubmitForm() {
+
+        var form = $("#form1");
+
+        form.ajaxSubmit({
+            url: "Form1WithModel",
+            type: "post",
+            success: function (data) {
+                console.log(data);
+            }
+        });
+    }
+
+    function SubmitFormPost() {
+        $.post(
+            "Form1WithModel",
+            $("#form1").serialize(),
+            function (data) {
+                console.log(data)
+            });
+    }
+</script>

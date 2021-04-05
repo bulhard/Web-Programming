@@ -1,19 +1,43 @@
-﻿@model _05_ASP.NET_Core_Forms.Models.Home.StudentViewModel
+﻿@using _05_ASP.NET_Core_Forms.Models.Home
+
+@model _05_ASP.NET_Core_Forms.Models.Home.StudentViewModel
+
 @{
     ViewData["Title"] = "Form 3";
 }
 
-    <div class="text-center">
-        <h1 class="display-4">Form 3</h1>
+<div>
+    <h1 class="display-4">Form 3</h1>
 
-        @using (Html.BeginForm("Form1", "Home", FormMethod.Post))
-        {
-            @Html.ValidationSummary()
-            <hr />
-            @Html.LabelFor(m => m.FirstName) 
-            @Html.TextBoxFor(m => m.FirstName)
-            @Html.ValidationMessageFor(m=>m.FirstName)
-            <hr />
-            <input type="submit" value="Submit" />
-        }
-    </div>
+    @using (Html.BeginForm("Form3", "Home", FormMethod.Post))
+    {
+        @Html.ValidationSummary()
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.FirstName)
+            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.FirstName)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.isActive)
+            @Html.CheckBoxFor(m => m.isActive, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.TextGender)
+            @Html.RadioButtonFor(m => m.TextGender, "Male", new { @class = "form-control" })
+            @Html.RadioButtonFor(m => m.TextGender, "Female", new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.StudentGender)
+            @Html.DropDownListFor(m => m.StudentGender,
+            new SelectList(Enum.GetValues(typeof(Gender))),
+            "Select Gender", new { @class = "form-control" })
+        </div>
+
+        <hr />
+        <input type="submit" value="Submit" class="btn btn-success" />
+    }
+</div>
