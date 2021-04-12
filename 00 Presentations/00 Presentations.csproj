@@ -41,5 +41,8 @@
     <None Include="03 DI, IoT, Services.pptx" />
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

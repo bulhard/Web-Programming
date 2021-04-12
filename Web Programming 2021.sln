@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04 ASP.NET Core MVC", "04 A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04 Students Homework", "04 Students Homework\04 Students Homework.csproj", "{BD57061C-E48B-4225-984D-52DD7081F44B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05 ASP.NET Core Forms", "05 ASP.NET Core Forms\05 ASP.NET Core Forms.csproj", "{23F68E57-DF8D-4334-8608-9C0AD933D3B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05 ASP.NET Core Forms", "05 ASP.NET Core Forms\05 ASP.NET Core Forms.csproj", "{23F68E57-DF8D-4334-8608-9C0AD933D3B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06 Working with DB", "06 Working with DB\06 Working with DB.csproj", "{908D2A0A-C9E7-4BAD-A709-0A7704A4B64F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{23F68E57-DF8D-4334-8608-9C0AD933D3B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23F68E57-DF8D-4334-8608-9C0AD933D3B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23F68E57-DF8D-4334-8608-9C0AD933D3B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{908D2A0A-C9E7-4BAD-A709-0A7704A4B64F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{908D2A0A-C9E7-4BAD-A709-0A7704A4B64F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{908D2A0A-C9E7-4BAD-A709-0A7704A4B64F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{908D2A0A-C9E7-4BAD-A709-0A7704A4B64F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
