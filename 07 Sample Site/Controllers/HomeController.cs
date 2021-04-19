@@ -3,35 +3,34 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
+using MyBlog.Services.Interfaces;
+using MyBlog.Models.Home;
 
 namespace MyBlog.Controllers
 {
-    [Authorize]
+    [AllowAnonymous]
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<HomeController> logger;
+        private readonly IBlogService blogService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IBlogService blogService)
         {
-            _logger = logger;
+            this.logger = logger;
+            this.blogService = blogService;
         }
 
         public IActionResult Index()
         {
-            var user = User;
+            HomeViewModel homeViewModel = new HomeViewModel();
 
-            return View();
-        }
+            homeViewModel.UserName = User.Identity.Name;
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+            homeViewModel.Categories = blogService.GetCategories();
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            homeViewModel.Posts = blogService.GetPosts();
+
+            return View(homeViewModel);
         }
     }
 }

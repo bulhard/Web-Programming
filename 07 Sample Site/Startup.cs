@@ -6,9 +6,13 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MyBlog.Data;
+using MyBlog.Services;
+using MyBlog.Services.Interfaces;
 
 namespace MyBlog
 {
@@ -31,6 +35,11 @@ namespace MyBlog
 
             services
                 .AddControllersWithViews();
+
+            services.AddTransient<IBlogService, BlogService>();
+
+            services.AddDbContext<MyBlogContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("MyBlogConnectionString")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
