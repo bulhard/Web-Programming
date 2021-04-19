@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04 Students Homework", "04 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05 ASP.NET Core Forms", "05 ASP.NET Core Forms\05 ASP.NET Core Forms.csproj", "{23F68E57-DF8D-4334-8608-9C0AD933D3B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06 Working with DB", "06 Working with DB\06 Working with DB.csproj", "{908D2A0A-C9E7-4BAD-A709-0A7704A4B64F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06 Working with DB", "06 Working with DB\06 Working with DB.csproj", "{908D2A0A-C9E7-4BAD-A709-0A7704A4B64F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07 Sample Site", "07 Sample Site\07 Sample Site.csproj", "{850D0FF3-5018-478B-9686-05C7CBB9F6CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{908D2A0A-C9E7-4BAD-A709-0A7704A4B64F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{908D2A0A-C9E7-4BAD-A709-0A7704A4B64F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{908D2A0A-C9E7-4BAD-A709-0A7704A4B64F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{850D0FF3-5018-478B-9686-05C7CBB9F6CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{850D0FF3-5018-478B-9686-05C7CBB9F6CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{850D0FF3-5018-478B-9686-05C7CBB9F6CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{850D0FF3-5018-478B-9686-05C7CBB9F6CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
