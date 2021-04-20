@@ -1,10 +1,10 @@
 ﻿using MyBlog.Data;
+using MyBlog.DataEntities;
 using MyBlog.Models.Blog;
 using MyBlog.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace MyBlog.Services
 {
@@ -24,6 +24,47 @@ namespace MyBlog.Services
                 .OrderBy(c => c.Title)
                 .Select(c => new CategoryViewModel { Id = c.Id, Title = c.Title })
                 .ToList();
+        }
+
+        public CategoryViewModel GetCategory(int Id)
+        {
+            return blogContext
+                .Categories
+                .Where(c => c.Id == Id)
+                .Select(c => new CategoryViewModel { Id = c.Id, Title = c.Title })
+                .FirstOrDefault();
+        }
+
+        public bool UpdateCategory(CategoryViewModel categoryViewModel)
+        {
+            try
+            {
+                Category category = new Category();
+
+                if (categoryViewModel.Id > 0)
+                {
+                    // Get existing category
+                    category = blogContext.Categories.Where(p => p.Id == categoryViewModel.Id).FirstOrDefault();
+                }
+                else
+                {
+                    // Add new category
+                    blogContext.Categories.Add(category);
+                }
+
+                // Update category details
+                category.Title = categoryViewModel.Title;
+
+                blogContext.SaveChanges();
+
+                categoryViewModel.Id = category.Id;
+            }
+            catch
+            {
+                return false;
+            }
+
+            return true;
         }
 
         public List<PostViewModel> GetPosts()
@@ -67,6 +108,48 @@ namespace MyBlog.Services
                     }
                     )
                 .FirstOrDefault();
+        }
+
+        public bool UpdatePost(PostViewModel postViewModel)
+        {
+            try
+            {
+                Post post = new Post();
+
+                if (postViewModel.Id > 0)
+                {
+                    // Get existing post
+                    post = blogContext.Posts.Where(p => p.Id == postViewModel.Id).FirstOrDefault();
+                }
+                else
+                {
+                    // Add new post
+                    blogContext.Posts.Add(post);
+                    post.DateCreated = DateTime.Now;
+                }
+
+                // Update post details
+                post.CategoryId = postViewModel.CategoryId;
+                post.Content = postViewModel.Content;
+                post.DateModified = DateTime.Now;
+                post.SubTitle = postViewModel.SubTitle;
+                post.Title = postViewModel.Title;
+
+                if (postViewModel.PhotoFile != null)
+                {
+                    post.Photo = postViewModel.Photo;
+                }
+
+                blogContext.SaveChanges();
+
+                postViewModel.Id = post.Id;
+            }
+            catch
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }

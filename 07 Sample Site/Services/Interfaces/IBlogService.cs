@@ -9,6 +9,12 @@ namespace MyBlog.Services.Interfaces
 
         PostViewModel GetPost(int Id);
 
+        bool UpdatePost(PostViewModel postViewModel);
+
         List<CategoryViewModel> GetCategories();
+
+        CategoryViewModel GetCategory(int Id);
+
+        bool UpdateCategory(CategoryViewModel categoryViewModel);
     }
 }

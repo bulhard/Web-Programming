@@ -1,9 +1,12 @@
-﻿namespace MyBlog.Models.Blog
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MyBlog.Models.Blog
 {
     public class CategoryViewModel
     {
         public int Id { get; set; }
 
+        [Required]
         public string Title { get; set; }
 
         public string CategorySlug
@@ -13,5 +16,7 @@
                 return $"_{Id}";
             }
         }
+
+        public string Message { get; set; }
     }
 }

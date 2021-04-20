@@ -8,7 +8,7 @@
     <div class="page-title-wrapper">
         <div class="page-title-heading">
             <div class="page-title-icon">
-                <i class="pe-7s-car icon-gradient bg-mean-fruit">
+                <i class="pe-7s-photo icon-gradient bg-mean-fruit">
                 </i>
             </div>
             <div>
@@ -18,7 +18,11 @@
                 </div>
             </div>
         </div>
-
+        <div class="page-title-actions">
+            <a href="/Admin/EditPost/0" data-toggle="tooltip" title="" data-placement="bottom" class="btn btn-success" data-original-title="Add new post">
+                Add new post
+            </a>
+        </div>
     </div>
 </div>
 
@@ -32,22 +36,29 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Title</th>
+                                <th>Photo</th>
                                 <th>Subtitle</th>
                                 <th>Category</th>
                                 <th>Action</th>
-                                
+
                             </tr>
                         </thead>
                         <tbody>
                             @foreach (var post in Model)
                             {
-                            <tr>
-                                <td>@post.Id</td>
-                                <td>@post.Title</td>
-                                <td>@post.SubTitle</td>
-                                <td>@post.CategoryTitle</td>
-                                <td><a class="mb-2 mr-2 btn btn-primary" href="/Admin/EditPost/@post.Id">Edit</a></td>
-                            </tr>
+                                <tr>
+                                    <td>@post.Id</td>
+                                    <td>@post.Title</td>
+                                    <td class="text-center">
+                                        @if (!string.IsNullOrEmpty(post.Photo))
+                                        {
+                                            <img width="40" class="rounded-circle" src="/uploads/@post.Photo" alt="">
+                                        }
+                                    </td>
+                                    <td>@post.SubTitle</td>
+                                    <td>@post.CategoryTitle</td>
+                                    <td><a class="mb-2 mr-2 btn btn-primary" href="/Admin/EditPost/@post.Id">Edit</a></td>
+                                </tr>
                             }
                         </tbody>
                     </table>

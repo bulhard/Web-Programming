@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Http;
+using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace MyBlog.Models.Blog
 {
@@ -9,11 +8,15 @@ namespace MyBlog.Models.Blog
     {
         public int Id { get; set; }
 
+        [StringLength(60, MinimumLength = 3)]
+        [Required]
         public string Title { get; set; }
 
         public string SubTitle { get; set; }
 
         public string Content { get; set; }
+
+        public IFormFile PhotoFile { get; set; }
 
         public string Photo { get; set; }
 
@@ -32,5 +35,7 @@ namespace MyBlog.Models.Blog
                 return $"_{CategoryId}";
             }
         }
+
+        public string Message { get; set; }
     }
 }
