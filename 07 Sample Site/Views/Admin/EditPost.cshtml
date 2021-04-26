@@ -22,7 +22,7 @@
     <div class="col-md-6">
         <form asp-action="EditPost" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" class="form-control" />
+            <input type="hidden" asp-for="Id" />
 
             <div class="form-group">
                 <label asp-for="CategoryId" class="control-label"></label>
@@ -60,7 +60,7 @@
             <div class="form-group">
                 <label class="control-label">Current photo</label>
                 <br />
-                <img src="/uploads/@Model.Photo" width="300"  />
+                <img src="/uploads/@Model.Photo" width="300" />
             </div>
         }
     </div>

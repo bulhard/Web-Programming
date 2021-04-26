@@ -32,7 +32,7 @@ namespace _10_Sending_Email
             // send email
             using var smtp = new SmtpClient();
 
-            smtp.Connect("smtp.ethereal.email", 587, SecureSocketOptions.StartTls);
+            smtp.Connect("smtp.ethereal.email", 587, SecureSocketOptions.StartTlsWhenAvailable);
             smtp.Authenticate("alvah.baumbach43@ethereal.email", "hjhZn93YTDb1Kjd1VA");
 
             smtp.Send(email);
