@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05 ASP.NET Core Forms", "05
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06 Working with DB", "06 Working with DB\06 Working with DB.csproj", "{908D2A0A-C9E7-4BAD-A709-0A7704A4B64F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07 Sample Site", "07 Sample Site\07 Sample Site.csproj", "{850D0FF3-5018-478B-9686-05C7CBB9F6CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07 Sample Site", "07 Sample Site\07 Sample Site.csproj", "{850D0FF3-5018-478B-9686-05C7CBB9F6CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10 Sending Email", "10 Sending Email\10 Sending Email.csproj", "{9E05B862-3FE2-4673-992B-EFAB93F09B7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{850D0FF3-5018-478B-9686-05C7CBB9F6CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{850D0FF3-5018-478B-9686-05C7CBB9F6CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{850D0FF3-5018-478B-9686-05C7CBB9F6CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E05B862-3FE2-4673-992B-EFAB93F09B7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E05B862-3FE2-4673-992B-EFAB93F09B7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E05B862-3FE2-4673-992B-EFAB93F09B7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E05B862-3FE2-4673-992B-EFAB93F09B7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -35,6 +35,7 @@
   <ItemGroup>
     <None Include="01 Introduction.pptx" />
     <None Include="02 Introduction-to-ASP.NET-MVC.pptx" />
+    <None Include="10 ASP.NET Sending E-mails.pptx" />
     <None Include="09 ASP.NET Core Identity.pptx" />
     <None Include="08 Storing Temporary Data.pptx" />
     <None Include="07 Simple Authentication.pptx" />
